@@ -45,9 +45,9 @@ const PopupType = forwardRef(({selectedType},ref) => {
           <div style={{marginBottom:10}}>支出</div>
           <div className={s.typeWrap}>
             {
-              expenseTypeArr.map((item)=>{
+              expenseTypeArr.map((item,key)=>{
                 return (
-                  <p className={cx({ [s.typeItem]: true, [s.active]: currentType.id == item.id })} onClick={()=>chooseType(item)}>{item.name}</p>
+                  <p className={cx({ [s.typeItem]: true, [s.active]: currentType.id == item.id })} key={key} onClick={()=>chooseType(item)}>{item.name}</p>
                 )
               })
             }
@@ -55,9 +55,9 @@ const PopupType = forwardRef(({selectedType},ref) => {
           <div style={{marginBottom:10}}>收入</div>
           <div className={s.typeWrap}>
             {
-              incomeTypeArr.map((item)=>{
+              incomeTypeArr.map((item, key)=>{
                 return (
-                  <p className={cx({ [s.typeItem]: true, [s.active]: currentType.id == item.id })} onClick={()=>chooseType(item)}>{item.name}</p>
+                  <p className={cx({ [s.typeItem]: true, [s.active]: currentType.id == item.id })} key={key} onClick={()=>chooseType(item)}>{item.name}</p>
                 )
               })
             }

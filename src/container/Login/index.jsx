@@ -35,8 +35,8 @@ const Login = () => {
           username,
           password
         });
-        console.log('data', data)
         localStorage.setItem('token', data.token);
+        window.location.href = '/';
       } else {
         if (!verify) {
           Toast.show('请输入验证码')

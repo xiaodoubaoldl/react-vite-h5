@@ -1,8 +1,10 @@
 .index {
+  height: 100%;
   .header {
     width: 100%;
     height: 80px;
     position: fixed;
+    z-index: 100;
     background-color: #007fff;
     color: #ffffff;
     padding: 10px;
@@ -38,5 +40,11 @@
         margin-right: 10px;
       }
     }
+  }
+  .content {
+    padding: 90px 10px 0px;
+    background-color: #eee;
+    height: calc(~"(100% - 50px)");
+    overflow-y: scroll;
   }
 }
